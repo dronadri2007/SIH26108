@@ -1,0 +1,16 @@
+# Only the project source is tracked; everything else in this working folder stays local
+/*
+!/.gitignore
+!/README.md
+!/sih26108-design.md
+!/frontend/
+
+# Dependencies, build output, local env
+node_modules/
+dist/
+dist-ssr/
+*.local
+*.log
+.env
+.env.*
+!.env.example
