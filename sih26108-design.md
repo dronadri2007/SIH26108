@@ -252,7 +252,7 @@ CREATE TABLE audit_log (                         -- every pipeline stage, for th
     stage       VARCHAR(24) NOT NULL,   -- EXTRACTION | DECOMPOSITION | RETRIEVAL | RERANKING | EVIDENCE_VALIDATION
                                         --   | CLASSIFICATION | RECOMMENDATION | WHY_NOT | RISK_DETECTION
     payload     JSONB NOT NULL,
-    model       VARCHAR(32),            -- 'claude-haiku-4.5' | 'claude-sonnet-4.5' | NULL for non-LLM stages
+    model       VARCHAR(32),            -- 'claude-haiku-4.5' | 'claude-sonnet-5.5' | NULL for non-LLM stages
     created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 CREATE INDEX idx_audit_query_stage ON audit_log (query_id, created_at);
